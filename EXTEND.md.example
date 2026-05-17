@@ -1,0 +1,20 @@
+# wx-lead-scanner 配置
+#
+# 复制此文件到以下路径之一：
+#   .wx-lead-scanner/EXTEND.md           (项目目录)
+#   ~/.wx-lead-scanner/EXTEND.md         (用户目录)
+
+## 飞书 Base（必填）
+base_token: 你的飞书多维表格token
+opportunity_table_id: tblXXXXXX
+channel_table_id: tblYYYYYY
+
+## 微信身份（必填）
+self_wxid_prefix: wxid_你的前缀
+self_display: 你的显示名
+
+## 业务关键词（可选，追加到默认关键词之后）
+# extra_keywords: SaaS, 私域, 代运营
+
+## 扫描范围（可选）
+# max_group_size: 20
