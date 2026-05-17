@@ -16,7 +16,7 @@
 ```
 
 1. 通过 [wx-cli](https://github.com/jackwener/wx-cli) 读取 Mac 微信本地数据库（数据不出本机）
-2. AI 做两层筛选：关键词快筛 + 语义判断（排除广告、闲聊、已有客户日常沟通）
+2. AI 全量语义扫描：对所有会话做语义初筛，再对候选拉完整消息深度识别（不依赖关键词，不会漏）
 3. 对比飞书多维表格已有记录去重
 4. 自动写入对应表（客户商机表 / 渠道表）
 5. 输出扫描报告
@@ -26,7 +26,7 @@
 | 工具 | 用途 | 安装 |
 |------|------|------|
 | [wx-cli](https://github.com/jackwener/wx-cli) | 读取微信本地数据 | `npm install -g @jackwener/wx-cli` |
-| [lark-cli](https://github.com/nicepkg/lark-cli) | 操作飞书多维表格 | `npm install -g lark-cli` |
+| [lark-cli](https://github.com/larksuite/cli) | 操作飞书多维表格 | `npm install -g @larksuite/cli` |
 | Claude Code | AI 语义识别 + 工作流编排 | [claude.ai/code](https://claude.ai/code) |
 
 ## 快速开始
@@ -68,8 +68,8 @@ channel_table_id: tblYYYYYY
 self_wxid_prefix: wxid_你的前缀
 self_display: 你的显示名
 
-## 自定义关键词（可选）
-extra_keywords: 你的产品名, 你的行业术语
+## 扫描范围（可选）
+# max_group_size: 20
 EOF
 ```
 
